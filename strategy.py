@@ -98,7 +98,7 @@ class PrismaStrategy:
             return
 
         try:
-            df = await self.client.get_candles_dataframe(self.asset, TimeFrame.MINUTE_1, count)
+            df = await self.client.get_candles_dataframe(self.asset, TimeFrame.M1, count)
             if df is not None and not df.empty:
                 self.candles = []
                 for _, row in df.iterrows():
@@ -389,6 +389,8 @@ class PrismaStrategy:
 
         except Exception as e:
             logger.error(f"Erro ao colocar ordem: {e}")
+
+    async def run_strategy(self):
         """Executa a estratégia em loop com WebSocket"""
         logger.info("Iniciando estratégia PRISMA IA")
 
