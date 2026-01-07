@@ -9,8 +9,8 @@ from loguru import logger
 from websockets.exceptions import ConnectionClosed
 from websockets.legacy.client import connect, WebSocketClientProtocol
 
-from models import ConnectionInfo, ConnectionStatus
-from constants import REGIONS
+from .models import ConnectionInfo, ConnectionStatus
+from .constants import REGIONS
 
 
 class ConnectionKeepAlive:
