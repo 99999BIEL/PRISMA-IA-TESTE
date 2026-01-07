@@ -441,7 +441,7 @@ class PrismaStrategy:
 
 async def main():
     # Exemplo de uso
-    SSID = r'42["auth",{"session":"demo_session","isDemo":1,"uid":12345,"platform":1}]'  # Substitua pelo seu SSID
+    SSID = r'42["auth",{"session":"AXQmsnH_W7h9hNBuc","isDemo":1,"uid":12345,"platform":1}]'  # Substitua pelo seu SSID
 
     strategy = PrismaStrategy(SSID, is_demo=True)
 
